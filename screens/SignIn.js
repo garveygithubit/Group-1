@@ -7,12 +7,14 @@ import {
   View,
   StyleSheet,
   Pressable,
+  TouchableOpacity
 } from "react-native";
 import COLORS from "../Constants/colors";
 import R_Button from "../components/radio_button";
 import Login_Button from "../components/login_button";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
-export default function SignInComponent() {
+export default function SignInComponent({navigation}) {
   return (
     <>
       <ImageBackground
@@ -45,7 +47,15 @@ export default function SignInComponent() {
           >
             <R_Button label="remember me" />
           </View>
-          <Login_Button />
+          <View >
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
+          <Text
+          style={{
+            fontSize: 25,
+            color: COLORS.white,
+          }}>LOG IN</Text>
+        </TouchableOpacity>
+        </View>
           <Pressable>
             <Text
               style={{
@@ -56,21 +66,22 @@ export default function SignInComponent() {
               Forgot Password?
             </Text>
           </Pressable>
-
-         
-         
         </View>
         <View
           style={{
-            width: "40%",
+            width: "100%",
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
+            justifyContent: "center",
+            alignItems: "center",
+            marginBottom: 100,
           }}
         >
           <Text
             style={{
               fontWeight: "bold",
+              color: Colors.white,
+              fontSize: 20,
             }}
           >
             Don't have an account?
@@ -78,7 +89,9 @@ export default function SignInComponent() {
           <Pressable>
             <Text
               style={{
-                fontWeight: 100,
+                fontWeight: 500,
+                color: COLORS.blue,
+                fontSize: 22,
               }}
             >
               Signup
@@ -109,7 +122,8 @@ const styles = StyleSheet.create({
   },
   form: {
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
+    gap: 40,
     alignItems: "center",
     height: 700,
     width: "90%",
@@ -120,5 +134,14 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: COLORS.grey,
     paddingLeft: 90,
+  },
+  button: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: COLORS.blue,
+    height: 45,
+    width: 250,
+    borderRadius: 20,
   },
 });

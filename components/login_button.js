@@ -5,15 +5,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 export default function Login_Button() {
   return (
     <>
-      <View>
-        <TouchableOpacity style={styles.button}>
-          <Text
-          style={{
-            fontSize: 25,
-            color: COLORS.white,
-          }}>LOG IN</Text>
-        </TouchableOpacity>
-      </View>
+      
     </>
   );
 }
