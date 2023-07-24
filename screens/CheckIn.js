@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, TextInput} from "react-native";
 import { Color, FontSize, Border } from "../GlobalStyles";
 import COLORS from "../Constants/colors";
 import { Button } from "react-native-paper";
-              
+
 const CheckIn = () => {
   return (
     <View style={styles.main}>
@@ -69,7 +69,7 @@ const CheckIn = () => {
     </View>
   );
 };
-
+ 
 const styles = StyleSheet.create({
   input: {
     backgroundColor: COLORS.white,
