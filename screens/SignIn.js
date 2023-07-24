@@ -7,98 +7,113 @@ import {
   View,
   StyleSheet,
   Pressable,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import COLORS from "../Constants/colors";
 import R_Button from "../components/radio_button";
-import Login_Button from "../components/login_button";
 import { Colors } from "react-native/Libraries/NewAppScreen";
+import AppBar from "../components/app_bar";
 
-export default function SignInComponent({navigation}) {
+export default function SignInComponent({ navigation }) {
   return (
     <>
-      <ImageBackground
-        style={styles.background_image}
-        source={require("../assets/loginbg_image.png")}
-        resizeMode="cover"
+      <View
+        style={{
+          display: "flex",
+          height: "100%",
+          width: "100%",
+        }}
       >
-        <View style={styles.backgroundShadow} />
-        <View style={styles.form}>
-          <Text
-            style={{
-              fontSize: 45,
-              fontWeight: 400,
-              marginTop: 10,
-            }}
-          >
-            Log In
-          </Text>
-          <TextInput style={styles.input} placeholder="Username" />
-          <TextInput
-            style={styles.input}
-            placeholder="Password"
-            secureTextEntry
-          />
+        <AppBar />
+        <ImageBackground
+          style={styles.background_image}
+          source={require("../assets/loginbg_image.png")}
+          resizeMode="cover"
+        >
+          <View style={styles.backgroundShadow} />
+          <View style={styles.form}>
+            <Text
+              style={{
+                fontSize: 45,
+                fontWeight: 400,
+                marginTop: 10,
+              }}
+            >
+              Log In
+            </Text>
+            <TextInput style={styles.input} placeholder="Username" />
+            <TextInput
+              style={styles.input}
+              placeholder="Password"
+              secureTextEntry
+            />
 
+            <View
+              style={{
+                width: "65%",
+              }}
+            >
+              <R_Button label="remember me" />
+            </View>
+            <View>
+              <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate("Home")}
+              >
+                <Text
+                  style={{
+                    fontSize: 25,
+                    color: COLORS.white,
+                  }}
+                >
+                  LOG IN
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <Pressable>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  fontSize: 18,
+                }}
+              >
+                Forgot Password?
+              </Text>
+            </Pressable>
+          </View>
           <View
             style={{
-              width: "65%",
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              marginBottom: 100,
             }}
           >
-            <R_Button label="remember me" />
+            <Text
+              style={{
+                fontWeight: "bold",
+                color: Colors.white,
+                fontSize: 20,
+              }}
+            >
+              Don't have an account?
+            </Text>
+            <Pressable>
+              <Text
+                style={{
+                  fontWeight: 500,
+                  color: COLORS.blue,
+                  fontSize: 22,
+                }}
+              >
+                Signup
+              </Text>
+            </Pressable>
           </View>
-          <View >
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
-          <Text
-          style={{
-            fontSize: 25,
-            color: COLORS.white,
-          }}>LOG IN</Text>
-        </TouchableOpacity>
-        </View>
-          <Pressable>
-            <Text
-              style={{
-                fontWeight: 600,
-                fontSize: 18,
-              }}
-            >
-              Forgot Password?
-            </Text>
-          </Pressable>
-        </View>
-        <View
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            marginBottom: 100,
-          }}
-        >
-          <Text
-            style={{
-              fontWeight: "bold",
-              color: Colors.white,
-              fontSize: 20,
-            }}
-          >
-            Don't have an account?
-          </Text>
-          <Pressable>
-            <Text
-              style={{
-                fontWeight: 500,
-                color: COLORS.blue,
-                fontSize: 22,
-              }}
-            >
-              Signup
-            </Text>
-          </Pressable>
-        </View>
-      </ImageBackground>
+        </ImageBackground>
+      </View>
     </>
   );
 }
