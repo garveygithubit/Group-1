@@ -12,7 +12,7 @@ const MapComp = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
+    backgroundColor: "grey",
     color: "white",
     width: "100%",
   },
