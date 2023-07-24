@@ -11,7 +11,7 @@ import { Button } from "react-native-paper";
 
 
 
-const CheckIn = () => {
+const CheckIn = ({navigation}) => {
   return (
     <View style={styles.main}>
       <View style={styles.groupWorkLogo3Parent}>
@@ -70,7 +70,7 @@ const CheckIn = () => {
                 <Text style={{top:150, position: "absolute", fontSize:17, left:10}}>Security code</Text>
                 <TextInput style={styles.input} placeholder="Enter security code"></TextInput>
             </View>
-            <Button style={styles.button}>Confirm</Button>
+            <Button style={styles.button} onPress={()=> navigation.navigate("More")}>Confirm</Button>
       </View>
     </View>
   );

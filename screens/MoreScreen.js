@@ -27,7 +27,7 @@ const MoreScreen = () => {
         }}
       >
         <Image
-          source={require("../assets/logo.png")}
+          source={require("../assets/logo.jpg")}
           style={{ width: 100, height: 100 }}
         />
       </View>
@@ -54,10 +54,6 @@ const MoreScreen = () => {
           <Text style={{ color: "#548", fontWeight: "bold", fontSize: 18 }}>
             Remove Advertisement
           </Text>
-          <Image
-            source={require("../assets/info.png")}
-            style={{ width: 25, height: 25 }}
-          />
         </View>
       </View>
       <View
@@ -80,10 +76,6 @@ const MoreScreen = () => {
             borderBottomColor: "#333",
           }}
         >
-          <Image
-            source={require("../assets/help.png")}
-            style={{ width: 25, height: 25, tintColor: "#548" }}
-          />
           <Text
             style={{
               color: "#548",
@@ -106,10 +98,6 @@ const MoreScreen = () => {
             borderBottomColor: "#333",
           }}
         >
-          <Image
-            source={require("../assets/giftbox.png")}
-            style={{ width: 25, height: 25, tintColor: "#548" }}
-          />
           <Text style={{ color: "#548", fontWeight: "bold", fontSize: 18 }}>
             Remove Advertisement
           </Text>
@@ -126,10 +114,6 @@ const MoreScreen = () => {
             borderBottomRightRadius: 10,
           }}
         >
-          <Image
-            source={require("../assets/video-player.png")}
-            style={{ width: 25, height: 25, tintColor: "#548" }}
-          />
           <Text style={{ color: "#548", fontWeight: "bold", fontSize: 18 }}>
             Play Advertisement
           </Text>
@@ -164,18 +148,10 @@ const MoreScreen = () => {
               borderBottomRightRadius: 10,
             }}
           >
-            <Image
-              source={require("../assets/social-media.png")}
-              style={{ width: 25, height: 25, tintColor: "#548" }}
-            />
             <Text style={{ color: "white", fontWeight: "bold", fontSize: 18 }}>
               Passcode Lock
             </Text>
           </View>
-          <Image
-            source={require("../assets/greater-than.png")}
-            style={{ width: 10, height: 12, tintColor: "grey" }}
-          />
         </View>
 
         <View
@@ -201,18 +177,10 @@ const MoreScreen = () => {
               borderBottomRightRadius: 10,
             }}
           >
-            <Image
-              source={require("../assets/database-configuration.png")}
-              style={{ width: 25, height: 25, tintColor: "#548" }}
-            />
             <Text style={{ color: "white", fontWeight: "bold", fontSize: 18 }}>
               VPN
             </Text>
           </View>
-          <Image
-            source={require("../assets/greater-than.png")}
-            style={{ width: 10, height: 12, tintColor: "grey" }}
-          />
         </View>
 
         <View
@@ -237,18 +205,10 @@ const MoreScreen = () => {
               borderBottomRightRadius: 10,
             }}
           >
-            <Image
-              source={require("../assets/turn-off.png")}
-              style={{ width: 25, height: 25, tintColor: "#548" }}
-            />
             <Text style={{ color: "white", fontWeight: "bold", fontSize: 18 }}>
               WI-FI Sharing
             </Text>
           </View>
-          <Image
-            source={require("../assets/greater-than.png")}
-            style={{ width: 10, height: 12, tintColor: "grey" }}
-          />
         </View>
       </View>
     </SafeAreaView>

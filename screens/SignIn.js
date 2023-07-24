@@ -107,6 +107,7 @@ export default function SignInComponent({ navigation }) {
                   color: COLORS.blue,
                   fontSize: 22,
                 }}
+                onPress={() => {navigation.navigate("SignUp")}}
               >
                 Signup
               </Text>
