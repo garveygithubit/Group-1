@@ -66,8 +66,6 @@ const styles = StyleSheet.create({
   },
   star: {
     width: 20,
-    height: 20,
-    resizeMode: "contain",
   },
 });
 
