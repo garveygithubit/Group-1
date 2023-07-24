@@ -12,7 +12,7 @@ import {
 import MapComp from "../components/MapComp";
 import CardComp from "../components/CardComp";
 
-const MapScreen = () => {
+const MapScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{ flex: 1, marginTop: StatusBar.currentHeight }}>
       <View
@@ -38,13 +38,15 @@ const MapScreen = () => {
         <MapComp />
       </View>
       <View style={styles.cards}>
-        <FlatList
-          data={[{ name: 1 }, { name: 2 }, { name: 3 }, { name: 4 }]}
-          renderItem={() => <CardComp />}
-          keyExtractor={(item) => item.name}
-          horizontal={true}
-        />
-      </View>
+  <TouchableOpacity onPress={() => navigation.navigate('Details')}>
+    <FlatList
+      data={[{ name: 1 }, { name: 2 }, { name: 3 }, { name: 4 }]}
+      renderItem={() => <CardComp />}
+      keyExtractor={(item) => item.name}
+      horizontal={true}
+    />
+  </TouchableOpacity>
+</View>
     </SafeAreaView>
   );
 };

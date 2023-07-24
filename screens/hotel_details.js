@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import HotelCard from '../components/hotel_card';
 import AppBar from '../components/app_bar';
 
-export default HotelDetails = () => {
+export default function HotelDetails(){
     return (
         <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.contentContainer}>

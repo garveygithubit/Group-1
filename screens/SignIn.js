@@ -26,8 +26,7 @@ export default function SignInComponent() {
             style={{
               fontSize: 45,
               fontWeight: 400,
-              fontfamily: "Inter",
-              marginTop: 100,
+              marginTop: 10,
             }}
           >
             Log In
@@ -52,75 +51,14 @@ export default function SignInComponent() {
               style={{
                 fontWeight: 600,
                 fontSize: 18,
-                fontfamily: "Inter",
               }}
             >
               Forgot Password?
             </Text>
           </Pressable>
 
-          <View
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: 145,
-              height: 40,
-              backgroundColor: COLORS.seablue,
-              borderRadius: 20,
-            }}
-          >
-            <Text
-              style={{
-                position: "absolute",
-                fontSize: 20,
-                fontWeight: 500,
-                color: COLORS.black,
-              }}
-            >
-              or continue with
-            </Text>
-          </View>
-
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-              width: "55%",
-            }}
-          >
-            <Pressable>
-              <Image
-                source={require("../assets/google-chrome.webp")}
-                style={{
-                  height: 25,
-                  width: 25,
-                  borderRadius: 20,
-                }}
-              />
-            </Pressable>
-            <Pressable>
-              <Image
-                source={require("../assets/apple_logo.jpeg")}
-                style={{
-                  height: 25,
-                  width: 25,
-                  borderRadius: 20,
-                }}
-              />
-            </Pressable>
-            <Pressable>
-              <Image
-                source={require("../assets/Facebook-logo.png")}
-                style={{
-                  height: 30,
-                  width: 30,
-                  borderRadius: 20,
-                }}
-              />
-            </Pressable>
-          </View>
+         
+         
         </View>
         <View
           style={{
