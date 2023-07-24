@@ -13,8 +13,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "grey",
-    color: "white",
-    width: "100%",
   },
   map: {
     width: Dimensions.get("window").width,
