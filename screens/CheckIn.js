@@ -1,16 +1,23 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, TextInput} from "react-native";
 import { Color, FontSize, Border } from "../GlobalStyles";
 import COLORS from "../Constants/colors";
+import { Button } from "react-native-paper";
+
+
+
+
+
+
 
 const CheckIn = () => {
   return (
-    <View style={styles.asaresPage}>
+    <View style={styles.main}>
       <View style={styles.groupWorkLogo3Parent}>
       </View>
       <Image
-        style={styles.asaresPageChild}
+        style={styles.mainChild}
         contentFit="cover"
         source={require("../assets/rectangle-52.png")}
       />
@@ -27,8 +34,7 @@ const CheckIn = () => {
         <View style={styles.frame}>
           <Text
             style={[styles.arriving15JulyStaying, styles.totalCostTypo]}
-          >{`Arriving 15-July
-Staying 1 night`}</Text>
+          >{`Arriving: 15-July Staying: 1 night`}</Text>
           <Image
             style={styles.calendarIcon}
             contentFit="cover"
@@ -53,21 +59,42 @@ Staying 1 night`}</Text>
         </View>
       </View>
       <View style={[styles.rectangleParent, styles.parentLayout]}>
-        <View style={styles.frameInner} />
-        <View style={[styles.frame3, styles.frameLayout]}>
-          <View style={[styles.frame4, styles.frameLayout]}>
             <Text style={[styles.creditCardDetails, styles.totalCostTypo]}>
               Credit card details
             </Text>
-            
-          </View>
-        </View>
+            <View style={{flexDirection: "column", gap: 15, position: "relative"}}>
+                <Text style={{top:50, position: "absolute", fontSize:17,left:10}}>Card number</Text>
+                <TextInput style={styles.input} placeholder="Enter card number"></TextInput>
+                <Text style={{top:100, position: "absolute",fontSize:17,left:10}}>Expiry Date</Text>
+                <TextInput style={styles.input} placeholder="Enter expiry date"></TextInput>
+                <Text style={{top:150, position: "absolute", fontSize:17, left:10}}>Security code</Text>
+                <TextInput style={styles.input} placeholder="Enter security code"></TextInput>
+            </View>
+            <Button style={styles.button}>Confirm</Button>
       </View>
     </View>
   );
 };
-
+ 
 const styles = StyleSheet.create({
+  input: {
+    backgroundColor: COLORS.white,
+    padding: 10,
+    borderRadius: 8,
+    width: 210,
+    left: 130,
+    top: 40,
+  },
+  button: {
+    left: 130,
+    width: 120,
+    backgroundColor: Color.lightsalmon,
+    top: 80,
+    color: COLORS.black,
+  },
+  label: {
+    position: "absolute",
+  },
   bookTypo: {
     textAlign: "center",
     position: "absolute",
@@ -117,7 +144,7 @@ const styles = StyleSheet.create({
     top: 0,
     position: "absolute",
   },
-  asaresPageChild: {
+  mainChild: {
     top: 0,
     width: "100%",
     height: 786,
@@ -214,18 +241,8 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     left: "50%",
   },
-  frameInner: {
-    top: 141,
-    left: 0,
-    borderTopLeftRadius: Border.br_3xs,
-    borderTopRightRadius: Border.br_3xs,
-    backgroundColor: "#d9d9d9",
-    width: 287,
-    height: 19,
-    position: "absolute",
-  },
   creditCardDetails: {
-    left: 0,
+    left: 80,
     top: 0,
     position: "absolute",
   },
@@ -250,10 +267,10 @@ const styles = StyleSheet.create({
   rectangleParent: {
     top: 392,
     width: 347,
-    height: 161,
+    height: 201,
     left: 30,
   },
-  asaresPage: {
+  main: {
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",
