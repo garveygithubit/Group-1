@@ -12,7 +12,7 @@ const HelpScreen = () => {
       }}
     >
       <View style={styles.container}>
-        <Image source={require("../assets/helpbg.png")} style={styles.image} />
+        <Image source={require("../assets/loginbg_image.png")} style={styles.image} />
       </View>
       <View style={styles.helpContainer}>
         <HelpBox

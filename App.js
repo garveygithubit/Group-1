@@ -7,6 +7,7 @@ import HotelDetails from "./screens/hotel_details";
 import Welcome from "./screens/Welcome";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CheckIn from "./screens/CheckIn";
+import HelpScreen from "./screens/HelpScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ export default function App() {
         <Stack.Screen name="Details" component={HotelDetails} />
         <Stack.Screen name="SignIn" component={SignInComponent} />
         <Stack.Screen name="CheckIn" component={CheckIn} />
+        <Stack.Screen name="Help" component={HelpScreen} />
       </Stack.Navigator>
     </NavigationContainer> 
     </>

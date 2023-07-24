@@ -1,6 +1,8 @@
-import { StyleSheet, Text, View, Image, Platform } from "react-native";
+import { StyleSheet, Text, View, Image, Platform, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native"
 
 const CardComp = ({ hotel = {} }) => {
+  const navigation = useNavigation();
   const {
     name = "Fiesta Royal Hotel",
     location = "Djorwulu, Accra",
@@ -11,6 +13,7 @@ const CardComp = ({ hotel = {} }) => {
     rating = 4.4,
   } = hotel;
   return (
+    <TouchableOpacity onPress={() => navigation.navigate('Details')}>
     <View style={[styles.card, Platform.OS === "ios" && styles.shadow]}>
       <Image source={require("../assets/room.png")} style={styles.image} />
 
@@ -35,6 +38,7 @@ const CardComp = ({ hotel = {} }) => {
         </View>
       </View>
     </View>
+    </TouchableOpacity>
   );
 };
 

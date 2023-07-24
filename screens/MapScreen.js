@@ -7,10 +7,11 @@ import {
   View,
   FlatList,
   Image,
-  TouchableOpacity,
+ 
 } from "react-native";
 import MapComp from "../components/MapComp";
 import CardComp from "../components/CardComp";
+import COLORS from "../Constants/colors";
 
 const MapScreen = ({navigation}) => {
   return (
@@ -24,8 +25,8 @@ const MapScreen = ({navigation}) => {
           alignItems: "center",
         }}
       >
-        <Image source={require("../assets/arrow.png")} style={styles.image} />
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Map</Text>
+        <Text style={{ fontSize: 16, fontWeight: "bold" , marginLeft:-20, color: COLORS.blue}} onPress={()=> navigation.navigate("Help")}>Need help?</Text>
+        <Text style={{ fontSize: 20, fontWeight: "bold" , marginLeft:-20 }}>Map</Text>
         <Image
           source={require("../assets/burger-menu.png")}
           style={styles.image}
@@ -38,14 +39,14 @@ const MapScreen = ({navigation}) => {
         <MapComp />
       </View>
       <View style={styles.cards}>
-  <TouchableOpacity onPress={() => navigation.navigate('Details')}>
+  
     <FlatList
       data={[{ name: 1 }, { name: 2 }, { name: 3 }, { name: 4 }]}
       renderItem={() => <CardComp />}
       keyExtractor={(item) => item.name}
       horizontal={true}
     />
-  </TouchableOpacity>
+ 
 </View>
     </SafeAreaView>
   );
