@@ -69,7 +69,7 @@ const CheckIn = () => {
     </View>
   );
 };
-
+ 
 const styles = StyleSheet.create({
   input: {
     backgroundColor: COLORS.white,
