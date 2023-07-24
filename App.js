@@ -1,25 +1,20 @@
 
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
 import SignInComponent from "./screens/SignIn";
 import MapScreen from "./screens/MapScreen";
-import HotelDetails from "./views/hotel_details";
+import HotelDetails from "./screens/hotel_details";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <>
+    <NavigationContainer>
       <SignInComponent />
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer> 
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+
 
