@@ -6,6 +6,7 @@ import MapScreen from "./screens/MapScreen";
 import HotelDetails from "./screens/hotel_details";
 import Welcome from "./screens/Welcome";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import CheckIn from "./screens/CheckIn";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen name="Home" component={MapScreen} />
         <Stack.Screen name="Details" component={HotelDetails} />
         <Stack.Screen name="SignIn" component={SignInComponent} />
+        <Stack.Screen name="CheckIn" component={CheckIn} />
       </Stack.Navigator>
     </NavigationContainer> 
     </>
