@@ -7,11 +7,11 @@ import { Button } from "react-native-paper";
 
 const CheckIn = () => {
   return (
-    <View style={styles.asaresPage}>
+    <View style={styles.main}>
       <View style={styles.groupWorkLogo3Parent}>
       </View>
       <Image
-        style={styles.asaresPageChild}
+        style={styles.mainChild}
         contentFit="cover"
         source={require("../assets/rectangle-52.png")}
       />
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     top: 0,
     position: "absolute",
   },
-  asaresPageChild: {
+  mainChild: {
     top: 0,
     width: "100%",
     height: 786,
@@ -264,7 +264,7 @@ const styles = StyleSheet.create({
     height: 201,
     left: 30,
   },
-  asaresPage: {
+  main: {
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",
