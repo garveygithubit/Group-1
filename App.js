@@ -1,6 +1,9 @@
+
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import SignInComponent from "./screens/SignIn";
+import MapScreen from "./screens/MapScreen";
+import HotelDetails from "./views/hotel_details";
 
 export default function App() {
   return (
@@ -19,3 +22,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
