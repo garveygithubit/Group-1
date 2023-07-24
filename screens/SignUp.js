@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { Checkbox } from "react-native-paper";
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
   return (
     <SafeAreaView
       style={{
@@ -235,7 +235,7 @@ const SignUp = () => {
           }}
         >
           <TouchableOpacity style={{ width: "100%" }}>
-            <Text style={{ color: "black", textAlign: "center" }}>
+            <Text style={{ color: "black", textAlign: "center" }} onPress={()=> navigation.navigate("SignIn")}>
               Create an account
             </Text>
           </TouchableOpacity>

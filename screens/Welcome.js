@@ -45,7 +45,7 @@ export default function Welcome({ navigation }) {
 
 const styles = StyleSheet.create({
     background_image: {
-        flex: 1, // Ensure the ImageBackground takes full height of its parent
+        flex: 1,
         alignItems: "center",
         justifyContent: "center",
         marginTop: 90

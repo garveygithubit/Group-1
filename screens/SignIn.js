@@ -24,7 +24,6 @@ export default function SignInComponent({ navigation }) {
           width: "100%",
         }}
       >
-        <AppBar />
         <ImageBackground
           style={styles.background_image}
           source={require("../assets/loginbg_image.png")}
