@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import BookCard from './book_card';
 import PriceDetails from './price_details';
 
-export default HotelCard = () => {
+export default HotelCard = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Image
@@ -12,7 +12,7 @@ export default HotelCard = () => {
       />
       <View style={styles.rowContainer}>
         <PriceDetails />
-        <BookCard />
+        <BookCard navigation={navigation}/>
       </View>
     </View>
   );

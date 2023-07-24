@@ -3,12 +3,12 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import HotelCard from '../components/hotel_card';
 import AppBar from '../components/app_bar';
 
-export default function HotelDetails(){
+export default function HotelDetails({navigation}){
     return (
         <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <AppBar />
-        <HotelCard />
+        <HotelCard navigation={navigation}/>
         <HotelCard />
         <HotelCard />
         <HotelCard />

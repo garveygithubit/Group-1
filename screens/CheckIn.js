@@ -1,18 +1,13 @@
 import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, View, Text } from "react-native";
-import { FontFamily, Color, FontSize, Border } from "../GlobalStyles";
+import { Color, FontSize, Border } from "../GlobalStyles";
+import COLORS from "../Constants/colors";
 
 const CheckIn = () => {
   return (
     <View style={styles.asaresPage}>
       <View style={styles.groupWorkLogo3Parent}>
-        <Image
-          style={styles.groupWorkLogo3}
-          contentFit="cover"
-          source={require("../assets/group-work-logo-3.png")}
-        />
-        <View style={styles.frameChild} />
       </View>
       <Image
         style={styles.asaresPageChild}
@@ -22,7 +17,7 @@ const CheckIn = () => {
       <Text style={[styles.fiestaRoyaleHotel, styles.bookTypo]}>
         Fiesta Royale Hotel
       </Text>
-      <Text style={[styles.book, styles.bookTypo]}>3/BOOK</Text>
+      <Text style={[styles.book]}>Confirm booking details</Text>
       <Text style={[styles.totalCost, styles.totalCostTypo]}>Total Cost</Text>
       <View style={styles.wrapper}>
         <Text style={[styles.text, styles.textTypo]}>$ 350.00</Text>
@@ -60,20 +55,11 @@ Staying 1 night`}</Text>
       <View style={[styles.rectangleParent, styles.parentLayout]}>
         <View style={styles.frameInner} />
         <View style={[styles.frame3, styles.frameLayout]}>
-          <Image
-            style={[styles.padlockIcon, styles.iconLayout]}
-            contentFit="cover"
-            source={require("../assets/padlock.png")}
-          />
           <View style={[styles.frame4, styles.frameLayout]}>
             <Text style={[styles.creditCardDetails, styles.totalCostTypo]}>
               Credit card details
             </Text>
-            <View style={styles.frame5}>
-              <Text style={[styles.securePage, styles.bookTypo]}>
-                Secure Page
-              </Text>
-            </View>
+            
           </View>
         </View>
       </View>
@@ -84,21 +70,19 @@ Staying 1 night`}</Text>
 const styles = StyleSheet.create({
   bookTypo: {
     textAlign: "center",
-    fontFamily: FontFamily.interRegular,
     position: "absolute",
+    top: 0,
   },
   totalCostTypo: {
     color: Color.black,
     fontSize: FontSize.size_5xl,
     textAlign: "center",
-    fontFamily: FontFamily.interRegular,
   },
   textTypo: {
     top: 6,
     color: Color.black,
     fontSize: FontSize.size_5xl,
     textAlign: "center",
-    fontFamily: FontFamily.interRegular,
     position: "absolute",
   },
   parentLayout: {
@@ -125,11 +109,6 @@ const styles = StyleSheet.create({
     width: 96,
     height: 66,
   },
-  frameChild: {
-    backgroundColor: "#0f0e0c",
-    width: 297,
-    height: 66,
-  },
   groupWorkLogo3Parent: {
     flexDirection: "row",
     alignItems: "center",
@@ -139,37 +118,35 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   asaresPageChild: {
-    top: 66,
-    width: 393,
+    top: 0,
+    width: "100%",
     height: 786,
     left: 0,
     position: "absolute",
   },
   fiestaRoyaleHotel: {
     marginLeft: -145.5,
-    top: 158,
+    top: 100,
     color: Color.gray_100,
     fontSize: FontSize.size_13xl,
     textAlign: "center",
-    fontFamily: FontFamily.interRegular,
     left: "50%",
+    position: "absolute"
   },
   book: {
-    top: 99,
+    top: 49,
     display: "flex",
     justifyContent: "center",
-    width: 123,
     height: 36,
-    left: 22,
-    color: Color.gray_100,
-    fontSize: FontSize.size_13xl,
+    left: 0,
+    color: COLORS.white,
+    fontSize: 18,
     textAlign: "center",
-    fontFamily: FontFamily.interRegular,
     alignItems: "center",
   },
   totalCost: {
-    top: 491,
-    left: 245,
+    top: 330,
+    left: 105,
     position: "absolute",
   },
   text: {
@@ -177,8 +154,8 @@ const styles = StyleSheet.create({
     left: "50%",
   },
   wrapper: {
-    top: 539,
-    left: 227,
+    top: 320,
+    left: 230,
     borderRadius: 20,
     width: 152,
     height: 42,
@@ -232,14 +209,14 @@ const styles = StyleSheet.create({
   },
   deluxeRoomParent: {
     marginLeft: -173.51,
-    top: 225,
+    top: 120,
     paddingHorizontal: 0,
     paddingVertical: 8,
     left: "50%",
   },
   frameInner: {
     top: 141,
-    left: 33,
+    left: 0,
     borderTopLeftRadius: Border.br_3xs,
     borderTopRightRadius: Border.br_3xs,
     backgroundColor: "#d9d9d9",
@@ -247,21 +224,10 @@ const styles = StyleSheet.create({
     height: 19,
     position: "absolute",
   },
-  padlockIcon: {
-    left: 255,
-  },
   creditCardDetails: {
     left: 0,
     top: 0,
     position: "absolute",
-  },
-  securePage: {
-    left: 10,
-    fontSize: 20,
-    color: "#ff3030",
-    textAlign: "center",
-    fontFamily: FontFamily.interRegular,
-    top: 0,
   },
   frame5: {
     width: 130,
@@ -277,22 +243,20 @@ const styles = StyleSheet.create({
     top: 0,
   },
   frame3: {
-    left: 26,
+    left: 0,
     width: 295,
     top: 29,
   },
   rectangleParent: {
-    top: 692,
+    top: 392,
     width: 347,
     height: 161,
-    left: 22,
+    left: 30,
   },
   asaresPage: {
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",
-    height: 852,
-    overflow: "hidden",
   },
 });
 
