@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 
 const BookCard = ({navigation}) => {
-    return (
+    return (    
         <View style = {styles.parent}>
         <View style = {styles.container}>
         <Text style = {styles.text} onPress={() => navigation.navigate("CheckIn")}>
